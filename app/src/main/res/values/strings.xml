@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LaborLogin</string>
+    <string name="email">Email</string>
+    <string name="passw">Password</string>
+    <string name="pick">Pick Date</string>
+    <string name="birth">Birth Date</string>
+    <string name="login">Login</string>
+    <string name="remember">Remember</string>
+</resources>

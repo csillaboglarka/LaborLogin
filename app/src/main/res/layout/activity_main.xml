@@ -1,0 +1,91 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="66dp"
+        android:paddingRight="26dp"
+        android:paddingBottom="26dp"
+        android:paddingTop="66dp"
+
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="112dp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/passw"
+            android:inputType="textPassword"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="187dp" />
+
+        <CheckBox
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remember"
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="496dp"
+            tools:text="@string/remember" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="126dp"
+        android:paddingTop="196dp"
+        >
+
+        <Button
+            android:id="@+id/picUpDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goClick"
+            android:text="@string/pick"
+            tools:layout_editor_absoluteX="143dp"
+            tools:layout_editor_absoluteY="332dp" />
+
+        <TextView
+            android:id="@+id/birthDate"
+            android:layout_width="136dp"
+            android:layout_height="31dp"
+            android:text="@string/birth"
+            tools:layout_editor_absoluteX="137dp"
+            tools:layout_editor_absoluteY="398dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="126dp"
+        android:paddingTop="345dp">
+
+        <Button
+            android:id="@+id/logIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="logIn"
+            android:text="@string/login"
+            tools:layout_editor_absoluteX="169dp"
+            tools:layout_editor_absoluteY="594dp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
