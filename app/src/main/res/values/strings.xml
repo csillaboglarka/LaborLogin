@@ -6,4 +6,6 @@
     <string name="birth">Birth Date</string>
     <string name="login">Login</string>
     <string name="remember">Remember</string>
+    <string name="newhobby">Add new hobby</string>
+    <string name="viewhobby">View hobbys</string>
 </resources>

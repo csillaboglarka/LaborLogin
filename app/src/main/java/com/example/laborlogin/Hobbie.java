@@ -1,8 +1,10 @@
 package com.example.laborlogin;
 public class Hobbie {
-    public static final String TABLE_NAME="hobbies";
+
     public static final String COLUMN_ID="id";
-    public static  final String COLUMN_HOBBIE="hobbie";
+    public static final String DATABASE_NAME = "hobbies.db";
+    public static final String TABLE_NAME = "hobbies_table";
+    public static final String COL1 = "NAME";
 
     private int id;
     private String hobbie;
@@ -10,7 +12,7 @@ public class Hobbie {
     public static final String CREATE_TABLE=
             "CREATE TABLE" + TABLE_NAME + "("
                     + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                    + COLUMN_HOBBIE + " TEXT,"
+                    + COL1 + " TEXT,"
                     +  ")";
     public Hobbie()
     {

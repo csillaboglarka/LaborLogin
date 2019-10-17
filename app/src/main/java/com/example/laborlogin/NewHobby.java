@@ -2,32 +2,54 @@ package com.example.laborlogin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ContentValues;
 
-import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
+
 
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+
+import android.widget.Toast;
 
 
 public class NewHobby extends AppCompatActivity {
+
+    DatabaseHelper hobbyDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_hobby);
-    }
-    public void addNewHobby (View view) {
-
-        Intent intent = new Intent();
-        String hobbie = findViewById(R.id.hobbyyy).toString();
-        Hobbie h1 = new Hobbie(hobbie);
+        hobbyDB = new DatabaseHelper(this);
 
 
     }
-    // public void ViewHobbys (View view)
+    public void addNewHobby(View view){
+
+      //  Intent intent = new Intent(NewHobby.this,NewHobby.class);
+
+        EditText hob = findViewById(R.id.hobbyyy);
+        String txt = hob.getText().toString();
+        boolean insertData = hobbyDB.addData(txt);
+        if (insertData == true) {
+            Toast.makeText(NewHobby.this, "Hobby hozzaadva", Toast.LENGTH_LONG).show();
+
+        }
+        else{
+            Toast.makeText(NewHobby.this, "Hobby nem lett hozzaadva", Toast.LENGTH_LONG).show();
+
+        }
+
+
+
+
+    }
+     public void ListYourHobby (View view){
+         Intent intent = new Intent(NewHobby.this, LisrHobby.class);
+         startActivity(intent);
+     }
+
 
 }
